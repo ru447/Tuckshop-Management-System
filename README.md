@@ -1,6 +1,6 @@
 # Tuckshop-Management-System
 
-#Domain
+## Domain
 Business and Informal Trade
 
 ## Description
