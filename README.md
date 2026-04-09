@@ -1,1 +1,1 @@
-# Tuckshop-mini-app
+# Tuckshop-Management-System
