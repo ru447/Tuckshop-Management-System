@@ -12,9 +12,9 @@ This project presents a java based console application that digitises the operat
 - Track products
 
 ## Group Members
-- Tlotlo Reuben Sianga 202507215
+- Reuben Tlotlo Sianga 202507215
 - Omaatla Michelle Moremi 202504619
-- Rethabile Ramogotsi 202502385
+- Rethabile Warona Ramogotsi 202502385
 - Mpho Lucia Matshitsa 202504552
 - Rorisang Sekao Kolobe 202400503
   
