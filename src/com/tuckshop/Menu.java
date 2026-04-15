@@ -1,5 +1,7 @@
 package com.tuckshop.app;
 
+import java.util.Scanner;
+
 public class Menu {
     private Scanner scanner;
 
