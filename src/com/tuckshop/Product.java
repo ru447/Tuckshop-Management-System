@@ -1,3 +1,3 @@
-public class Product {
-    //type your code for product
+public class Product{
+    // type code here
 }
