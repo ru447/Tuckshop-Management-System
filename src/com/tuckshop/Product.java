@@ -36,7 +36,8 @@ class FoodItem extends Product{
 class DrinkItem extends Product{
     private int volumeML;
 
-    public DrinkIten(String name,double price,int quantity,int volumeML){
+    public DrinkItem
+    (String name,double price,int quantity,int volumeML){
         super(name,price,quantity);
         this.volumeML= volumeML;
     }
