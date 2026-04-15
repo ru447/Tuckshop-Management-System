@@ -1,11 +1,9 @@
 package com.tuckshop.app;
 
 public class Menu {
-    private TuckshopService service;
     private Scanner scanner;
 
     public Menu() {
-        service = new TuckshopService();
         scanner = new Scanner(System.in);
     }
 
