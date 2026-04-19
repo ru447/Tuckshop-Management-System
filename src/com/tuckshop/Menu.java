@@ -1,40 +1,58 @@
-//package
-package com.tuckshop;
+package src.com.tuckshop;
 
+import src.com.tuckshop;
+
+import java.util.ArrayList;
 import java.util.Scanner;
-//this class is for the menu loop 
+
 public class Menu {
-   //type you code for menu here 
+    public static void main(String[] args){
 
-   
-
-    public void displayMenu(){
-        Scanner in= new Scanner(System.in);
-        System.out.println("Enter 1. Show Tuckshop Products   2.Exit ");
-        int number= in.nextInt();
-        //pre conditions 
-        int count= 0;
-        do{
-            
-            switch(number){
-                case 1: 
-                    System.out.println("Sweets");
-                    System.out.println("Soft drinks");
-                    System.out.println("biscuits");
-                    System.out.println("chips");
-                    break;
-                case 2:
-                    System.out.println("thank you and come again next time");
-                    break;
-               default:
-                  System.out.println("Please enter a valid option");
-                    
-            }
-            
-            count++;
-        } while(count!=1);
+        ArrayList<Product> product = new ArrayList<>();
+        ArrayList<Sale> sales = new ArrayList<>();
         
-    }
+        Scanner scanner = new Scanner(System.in);
+        int choice;
 
+        System.out.println("*******************************************");
+        System.out.println("     Welcome! How Can We Help You?");
+        System.out.println("*******************************************");
+
+        do{
+            System.out.println("\n------MAIN MENU------");
+            System.out.println("1. View All Products");
+            System.out.println("2. Add New Product");
+            System.out.println("3. Make A Sale");
+            System.out.println("4. View Sales Report");
+            System.out.println("5. Search For A Product");
+            System.out.println("6. Exit");
+            System.out.println("Enter choice (1-6)");
+
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+             switch(choice){
+                 case 1:
+                     System.out.println("\n------STOCK LIST-------");
+                     if(products.isEmpty()){
+                         System.out.println("No Products Available");
+                     }else {
+                         for(int i = 0; i < products.size(); i++){
+                             System.out.println((i + 1) + "." + products.get(i));
+                         }
+                         System.out.println("Total No Of Products:  " + products.size());
+                     }
+                     break;
+                 case 2:
+
+                     break;
+
+                     
+             }
+        }
+    }
 }
+
+
+
 
