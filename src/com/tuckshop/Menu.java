@@ -1,4 +1,4 @@
-package com.tuckshop.app;
+package com.tuckshop;
 
 import java.util.Scanner;
 
