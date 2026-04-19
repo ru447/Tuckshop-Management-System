@@ -1,48 +1,58 @@
-package com.tuckshop;
+package src.com.tuckshop;
 
+import src.com.tuckshop;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-    private Scanner scanner;
+    public static void main(String[] args){
 
-    public Menu() {
-        scanner = new Scanner(System.in);
-    }
+        ArrayList<Product> product = new ArrayList<>();
+        ArrayList<Sale> sales = new ArrayList<>();
+        
+        Scanner scanner = new Scanner(System.in);
+        int choice;
 
-    public void start() {
-        System.out.println("=================================");
-        System.out.println(" Welcome! How Can We Help You?");
-        System.out.println("=================================");
+        System.out.println("*******************************************");
+        System.out.println("     Welcome! How Can We Help You?");
+        System.out.println("*******************************************");
 
-        boolean running = true;
-        while (running) {
-            printMainMenu();
-            int choice = readInt("Enter choice: ");
-            switch (choice) {
-                case 1: viewProducts(); break;
-                case 2: addProduct(); break;
-                case 3: makeSale(); break;
-                case 4: service.printSalesReport(); break;
-                case 5: searchProduct(); break;
-                case 0:
-                    System.out.println("Goodbye! See you next time.");
-                    running = false;
-                    break;
-                default:
-                    System.out.println("Invalid option. Please choose 0-5.");
-            }
+        do{
+            System.out.println("\n------MAIN MENU------");
+            System.out.println("1. View All Products");
+            System.out.println("2. Add New Product");
+            System.out.println("3. Make A Sale");
+            System.out.println("4. View Sales Report");
+            System.out.println("5. Search For A Product");
+            System.out.println("6. Exit");
+            System.out.println("Enter choice (1-6)");
+
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+             switch(choice){
+                 case 1:
+                     System.out.println("\n------STOCK LIST-------");
+                     if(products.isEmpty()){
+                         System.out.println("No Products Available");
+                     }else {
+                         for(int i = 0; i < products.size(); i++){
+                             System.out.println((i + 1) + "." + products.get(i));
+                         }
+                         System.out.println("Total No Of Products:  " + products.size());
+                     }
+                     break;
+                 case 2:
+
+                     break;
+
+                     
+             }
         }
     }
-
-    private void printMainMenu() {
-        System.out.println("\n--- MAIN MENU ---");
-        System.out.println("1. View all products");
-        System.out.println("2. Add new product");
-        System.out.println("3. Make a sale");
-        System.out.println("4. View sales report");
-        System.out.println("5. Search product");
-        System.out.println("0. Exit");
-    }
-
-
 }
+
+
+
+
