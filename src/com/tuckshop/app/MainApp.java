@@ -7,6 +7,7 @@ public class MainApp {
     //initial setup by Tlotlo
     public static void main(String[]args){
        Menu menuList= new Menu();
+       PaymentMethod payment= new PaymentMethod();
        
        //calling the displayMenu method 
        menuList.displayMenu();
