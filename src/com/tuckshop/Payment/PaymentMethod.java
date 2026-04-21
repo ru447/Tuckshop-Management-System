@@ -1,5 +1,5 @@
 //package
-package com.tuckshop;
+package com.tuckshop.Payment;
 
 import java.util.Scanner;
 

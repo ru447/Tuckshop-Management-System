@@ -1,4 +1,4 @@
-package com.tuckshop;
+package com.tuckshop.Payment;
 class CardPayment extends PaymentMethod {
     private String cardNumber;
 
@@ -8,7 +8,7 @@ class CardPayment extends PaymentMethod {
     }
 
     @Override
-    public void processPayment() {
+    public void processPayment() throws PaymentException {
         if (cardNumber == null || cardNumber.trim().length() < 4) {
             System.out.println("Invalid card number.");
             return;

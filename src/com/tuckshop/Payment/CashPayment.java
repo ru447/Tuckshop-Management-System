@@ -1,4 +1,4 @@
-package com.tuckshop;
+package com.tuckshop.Payment;
 class CashPayment extends PaymentMethod {
 
     public CashPayment(double amount) {
@@ -6,7 +6,7 @@ class CashPayment extends PaymentMethod {
     }
 
     @Override
-    public void processPayment() {
+    public void processPayment() throws PaymentException{
         System.out.println("\nProcessing cash payment...");
         printReceipt();
     }
