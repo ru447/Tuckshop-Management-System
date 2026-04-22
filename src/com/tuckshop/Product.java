@@ -1,50 +1,56 @@
 package com.tuckshop;
 public class Product {
-    protected String name;
-    protected double price;
+    protected String itemName;
+    protected double unitPrice;
     protected int quantity;
 
-    public Product(String name,double price,int quantityt){
-        this.name=name;
-        this.price=price;
+    public Product(String itemName,double unitPrice,int quantity){
+        this.itemName=itemName;
+        this.unitPrice=unitPrice;
         this.quantity=quantity;
     }
-    public void displayProduct(){
-        System.out.println("Name: " + name + "Price: P"+ price + "Quantity: "quantity);
+    public void showDetails(){
+        System.out.println("Name: " + iteName
+                           + "Price: P"+ unitPrice
+                           + "Quantity: "quantity);
     }
     
-    public double getPrice?(){return price;}
-    public String getName(){return name;}
+    public double getUnitPrice?(){return unitPrice;}
+    public String getItemName(){return itemName;}
     public int getQuantity(){return quantity;}
+    
     public void reduceQuantity(int amount){this.quantity-=amount;}
 }
 //FoodItem inherits from Product
 class FoodItem extends Product{
-    private String expiryDate;
+    private String bestBefore;
 
-    public FoodItem(String name,double price,int quantity,String expiryDate){
-        super(name,price,quantity);
-        this.expiryDate=expiryDate;
+    public FoodItem(String itemName,double unitPrice,int quantity,String bestBefore){
+        super(itemName,unitPrice,quantity);
+        this.bestBefore=bestBefore;
     }
     @Override
-    public void displayProduct(){
-        super.displayProduct();
-        System.out.println("Type: Food| Expiry: "+ expiryDate);
+    public void showDetails(){
+        super.showDetails();
+        System.out.println("Type: Food item");
+        System.out.println("Best Before: "+ bestBefore);
     }
 }
 //DrinkItem inherits from Product
 class DrinkItem extends Product{
-    private int volumeML;
+    private int bottleSize;
 
     public DrinkItem
-    (String name,double price,int quantity,int volumeML){
-        super(name,price,quantity);
-        this.volumeML= volumeML;
+    (String itemName,double unitPrice,int quantity,int bottleSize){
+        super(itemName,unitPrice,quantity);
+        this.bottleSize= bottleSize;
     }
 
     @Override
-    public void displayProduct(){
-        super.displayProduct();
-        System.out.println("Type: Drink Volume: "+ volumeML+"ml");
+    public void showDetails(){
+        super.showDetails();
+        System.out.println("Type: Drink ");
+        System.out.println("Bottle size:" + bottleSize + "ml");
+                           
     }
 }
