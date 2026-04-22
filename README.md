@@ -10,6 +10,7 @@ This project presents a java based console application that digitises the operat
 - Record sales and track products
 - Manage stock
 - Displays a menu
+- Supports cash,mobile and card payments
 
 ## Class List 
 - MainApp
