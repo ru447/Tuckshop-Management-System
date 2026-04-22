@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-package com.Tuckshop;
-
-import java.util.ArrayList;
-import java.util.Date;
-import com.Tuckshop.Product;
-import com.Tuckshop.PaymentMethod;
-import com.Tuckshop.PaymentException;
-=======
 package com.tuckshop;
-
-public class Sales {
-        private Date saleDate;
-        private ArrayList<Product> productsSold;
-        private String saleId;
-        private double totalAmount;
-        private PaymentMethod paymentmethod;
-        private boolean isPaid;
->>>>>>> 8371e99 (update)
 
  public class Sales {
     private Date saleDate;
