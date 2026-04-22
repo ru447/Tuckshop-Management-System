@@ -8,6 +8,11 @@ class CashPayment extends PaymentMethod {
     @Override
     public void processPayment() throws PaymentException{
         System.out.println("\nProcessing cash payment...");
-        printReceipt();
+    }
+    
+    @Override
+    public void printReceipt(){
+    System.out.println("Payment successful.");
+    System.out.printf("Amount paid: P%.2f%n", amount);
     }
 }

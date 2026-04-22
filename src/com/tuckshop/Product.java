@@ -1,4 +1,4 @@
-
+package com.tuckshop;
 public class Product {
     protected String name;
     protected double price;

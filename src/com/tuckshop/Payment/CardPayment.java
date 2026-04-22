@@ -17,6 +17,11 @@ class CardPayment extends PaymentMethod {
         System.out.println("\nProcessing card payment...");
         String lastDigits = cardNumber.substring(cardNumber.length() - 4);
         System.out.println("Card Number: ****" + lastDigits);
-        printReceipt();
+        
+    }
+    @Override
+    public void printReceipt(){
+    System.out.println("Payment successful.");
+    System.out.printf("Amount paid: P%.2f%n", amount);
     }
 }

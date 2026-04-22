@@ -1,4 +1,5 @@
 package com.tuckshop;
+<<<<<<< HEAD
 
 import com.tuckshop.app.Checkout;
 import com.tuckshop.Payment.CardPayment;
@@ -17,6 +18,14 @@ public class Menu {
         
     public void displayMenu(){
 
+=======
+import java.util.Scanner;
+
+public class Menu{
+
+  
+        void displayMenu(){
+>>>>>>> 8371e99 (update)
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -43,16 +52,9 @@ public class Menu {
              switch(choice){
                  case 1:
                      System.out.println("\n------STOCK LIST-------");
-                     if(products.isEmpty()){
-                         System.out.println("No Products Available");
-                     }else {
-                         for(int i = 0; i < products.size(); i++){
-                             System.out.println((i + 1) + "." + products.get(i));
-                         }
-                         System.out.println("Total No Of Products:  " + products.size());
-                     }
-                     break;
+                break;
                  case 2:
+<<<<<<< HEAD
                     System.out.println("\n-----ADD PRODUCT-----");
                     System.out.println("1. Food Item");
                     System.out.println("2. Drink Item");
@@ -147,6 +149,27 @@ public class Menu {
         }while(choice != 4);
     }
 }
+=======
+                    System.out.println("\n------ADD NEW PRODUCT-------");
+                     break;
+                    
+                    case 3:
+                        System.out.println("\n------MAKE A SALE-------");
+                        break;
+                         case 4:
+                        System.out.println("\n------VIEW SALES REPORT-------");
+                        break;
+                         case 5:
+                        System.out.println("\n------SEARCH FOR A PRODUCT-------");
+                        break;
+             }
+
+                } while (choice !=6);
+            }
+        }
+        
+
+>>>>>>> 8371e99 (update)
 
 
 
