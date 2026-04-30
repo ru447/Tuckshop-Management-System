@@ -1,5 +1,5 @@
 package com.tuckshop.Payment;
-class CardPayment extends PaymentMethod {
+public class CardPayment extends PaymentMethod {
     private String cardNumber;
 
     public CardPayment(double amount, String cardNumber) {

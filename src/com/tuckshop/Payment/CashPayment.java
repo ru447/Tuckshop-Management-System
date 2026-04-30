@@ -1,5 +1,5 @@
 package com.tuckshop.Payment;
-class CashPayment extends PaymentMethod {
+public class CashPayment extends PaymentMethod {
 
     public CashPayment(double amount) {
         super(amount);

@@ -1,8 +1,8 @@
 package com.tuckshop;
 public class Product {
-    protected String itemName;
-    protected double unitPrice;
-    protected int quantity;
+    private String itemName;
+    private double unitPrice;
+    private int quantity;
 
     public Product(String itemName,double unitPrice,int quantity){
         this.itemName=itemName;
@@ -10,12 +10,12 @@ public class Product {
         this.quantity=quantity;
     }
     public void showDetails(){
-        System.out.println("Name: " + iteName
+        System.out.println("Name: " + itemName
                            + "Price: P"+ unitPrice
-                           + "Quantity: "quantity);
+                           + "Quantity: "+ quantity);
     }
     
-    public double getUnitPrice?(){return unitPrice;}
+    public double getUnitPrice(){return unitPrice;}
     public String getItemName(){return itemName;}
     public int getQuantity(){return quantity;}
     
