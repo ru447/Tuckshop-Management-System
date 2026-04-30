@@ -1,31 +1,35 @@
 package com.tuckshop;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.Date;
+import com.Tuckshop.Product;
+import com.Tuckshop.PaymentMethod;
+import com.Tuckshop.PaymentException;
 
  public class Sales {
-   
-    private ArrayList <Product> products= new ArrayList<>();
+    private Date saleDate;
+    private ArrayList<Product> productsSold;
+    private String saleId;
+    private double totalAmount;
+    private PaymentMethod paymentMethod;
+    private boolean isPaid;
 
-<<<<<<< HEAD
     public Sales(ArrayList<Product> initialProducts, String saleId, PaymentMethod paymentMethod){
         this.saleId = saleId;
         this.saleDate = new Date();
         this.productsSold = new ArrayList<>(initialProducts);
         this.totalAmount = calculateTotal(initialProducts);
         this.paymentMethod = paymentMethod;
-        this.isPaid = false;
-=======
-    public void addProduct(Product p){
-        products.add(p);
->>>>>>> 60e1cfa76d0d8a62f73c24e29a1eac2ae481c126
+        this.isPaid = (paymentMethod != null);
     }
-    
-    public void displaySales(){
-        for(Product p: products){
-            System.out.println(p.getItemName()+ "---"+p.getUnitPrice());
+
+    private double calculateTotal(ArrayList<Product> products){
+        double total = 0.0;
+        for (Product product : products){
+            total += product.getPrice();
         }
+        return total;
     }
-<<<<<<< HEAD
 
     public void addProduct(Product product){
         productsSold. add(product);
@@ -34,10 +38,9 @@ import java.util.ArrayList;
 
     public void removeProduct(Product product){
         if (productsSold. remove (product)) {
+
             totalAmount -= product. getPrice();
-            return true;
         }
-        return false;
     }
 
     public void processPayment(PaymentMethod paymentMethod) throws PaymentException{
@@ -60,6 +63,4 @@ import java.util.ArrayList;
 
     public boolean isPaid() {return isPaid;}
     
-=======
->>>>>>> 60e1cfa76d0d8a62f73c24e29a1eac2ae481c126
 }
