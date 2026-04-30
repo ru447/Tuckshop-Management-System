@@ -1,7 +1,7 @@
 package com.tuckshop.app;
 
-import com.payment.PaymentException;
-import com.payment.PaymentMethod;
+import com.tuckshop.Payment.PaymentException;
+import com.tuckshop.Payment.PaymentMethod;
 
 public class Checkout {
 
