@@ -3,8 +3,8 @@ package com.tuckshop;
 import java.util.ArrayList;
 import java.util.Date;
 import com.tuckshop.Product;
-import com.tuckshop.PaymentMethod;
-import com.tuckshop.PaymentException;
+import com.tuckshop.Payment.PaymentMethod;
+import com.tuckshop.Payment.PaymentException;
 
  public class Sales {
     private Date saleDate;
