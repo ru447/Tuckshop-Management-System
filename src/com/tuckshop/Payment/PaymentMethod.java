@@ -1,20 +1,18 @@
 //package
 package com.tuckshop.Payment;
 
-import java.util.Scanner;
-
 // Abstract class
-abstract class PaymentMethod {
+public abstract class PaymentMethod {
     protected double amount;
 
     public PaymentMethod(double amount) {
         this.amount = amount;
     }
 
-    public abstract void processPayment();
+    public abstract void processPayment() throws PaymentException;
 
-    public void printReceipt() {
-        System.out.println("Payment successful.");
-        System.out.printf("Amount paid: P%.2f%n", amount);
-    }
+    public abstract void printReceipt();
+
+    public abstract void paid(boolean okay) throws PaymentException;
+
 }

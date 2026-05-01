@@ -1,5 +1,5 @@
 package com.tuckshop.Payment;
-class CardPayment extends PaymentMethod {
+public class CardPayment extends PaymentMethod {
     private String cardNumber;
 
     public CardPayment(double amount, String cardNumber) {
@@ -17,6 +17,19 @@ class CardPayment extends PaymentMethod {
         System.out.println("\nProcessing card payment...");
         String lastDigits = cardNumber.substring(cardNumber.length() - 4);
         System.out.println("Card Number: ****" + lastDigits);
-        printReceipt();
+        
     }
+    @Override
+    public void printReceipt(){
+    System.out.println("Payment successful.");
+    System.out.printf("Amount paid: P%.2f%n", amount);
+    }
+      @Override
+    public void paid(boolean okay) throws PaymentException {
+        
+        if(okay == true){
+        throw new PaymentException("this customer paid");
+    }
+}
+
 }

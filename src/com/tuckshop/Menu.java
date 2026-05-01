@@ -27,7 +27,7 @@ public class Menu {
         do{
             System.out.println("\n------MAIN MENU------");
             System.out.println("1. View All Products");
-            System.out.println("2. Add New Product");
+            System.out.println("2. New Product");
             System.out.println("3. Make A Sale");
             System.out.println("4. Exit");
             System.out.println("Enter choice (1-4)");
@@ -43,15 +43,7 @@ public class Menu {
              switch(choice){
                  case 1:
                      System.out.println("\n------STOCK LIST-------");
-                     if(products.isEmpty()){
-                         System.out.println("No Products Available");
-                     }else {
-                         for(int i = 0; i < products.size(); i++){
-                             System.out.println((i + 1) + "." + products.get(i));
-                         }
-                         System.out.println("Total No Of Products:  " + products.size());
-                     }
-                     break;
+                break;
                  case 2:
                     System.out.println("\n-----ADD PRODUCT-----");
                     System.out.println("1. Food Item");
