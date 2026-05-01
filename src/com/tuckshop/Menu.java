@@ -15,7 +15,7 @@ public class Menu{
         do{
             System.out.println("\n------MAIN MENU------");
             System.out.println("1. View All Products");
-            System.out.println("2. Add New Product");
+            System.out.println("2. New Product");
             System.out.println("3. Make A Sale");
             System.out.println("4. View Sales Report");
             System.out.println("5. Search For A Product");
@@ -41,6 +41,11 @@ public class Menu{
                         break;
                          case 5:
                         System.out.println("\n------SEARCH FOR A PRODUCT-------");
+                        break;
+                        case 6:
+                        System.out.println("Exiting the program");
+                        default: 
+                        System.out.println("Invalid option");
                         break;
              }
 

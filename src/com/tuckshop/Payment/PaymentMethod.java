@@ -12,4 +12,7 @@ public abstract class PaymentMethod {
     public abstract void processPayment() throws PaymentException;
 
     public abstract void printReceipt();
+
+    public abstract void paid(boolean okay) throws PaymentException;
+
 }

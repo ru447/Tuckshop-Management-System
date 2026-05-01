@@ -15,4 +15,11 @@ public class CashPayment extends PaymentMethod {
     System.out.println("Payment successful.");
     System.out.printf("Amount paid: P%.2f%n", amount);
     }
+      @Override
+    public void paid(boolean okay) throws PaymentException {
+        
+        if(okay == true){
+        throw new PaymentException("this customer paid");
+    }
+}
 }
