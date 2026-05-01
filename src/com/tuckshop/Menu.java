@@ -6,13 +6,16 @@ import com.tuckshop.Payment.CashPayment;
 import com.tuckshop.Payment.MobileWalletPayment;
 import com.tuckshop.Payment.PaymentException;
 import com.tuckshop.Payment.PaymentMethod;
+import com.tuckshop.Product.DrinkItem;
+import com.tuckshop.Product.FoodItem;
+import com.tuckshop.Product.Product;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
        private ArrayList<Product> product = new ArrayList<>();
-       private ArrayList<Sale> sales = new ArrayList<>();
+       private ArrayList<Sales> sales = new ArrayList<>();
        private Checkout checkout = new Checkout();
         
     public void displayMenu(){
@@ -109,7 +112,7 @@ public class Menu {
                     }else if(paymentChoice == 2){
                         System.out.println("Enter phone number");
                         String phoneNumber = scanner.nextLine();
-                        paymentMethod = new MobileWalletPayment(0, phoneNumberNumber);
+                        paymentMethod = new MobileWalletPayment(0, phoneNumber);
                     }else if(paymentChoice == 3){
                         System.out.println("Enter card number");
                         String cardNumber = scanner.nextLine();
