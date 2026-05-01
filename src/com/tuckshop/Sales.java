@@ -2,7 +2,7 @@ package com.tuckshop;
 
 import java.util.ArrayList;
 import java.util.Date;
-import com.tuckshop.Product;
+import com.tuckshop.Product.Product;
 import com.tuckshop.Payment.PaymentMethod;
 import com.tuckshop.Payment.PaymentException;
 
@@ -41,7 +41,7 @@ import com.tuckshop.Payment.PaymentException;
     }
 
     public void addProduct(Product product){
-        if product == null) {
+        if (product == null) {
             System.out.println("Cannot add null product");
             return;
         }
@@ -100,6 +100,6 @@ import com.tuckshop.Payment.PaymentException;
         return "Sale ID: " + saleId
         + " | Date: " + saleDate 
         + " | Total: P" + String.format("%.2f", totalAmount)
-        + " | " (isPaid ? "Paid" : "Unpaid");
+        + " | " +(isPaid ? "Paid" : "Unpaid");
     }
 }
